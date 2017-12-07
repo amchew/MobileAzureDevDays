@@ -7,6 +7,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace MobileAzureDevDays.Droid
 {
@@ -23,6 +26,7 @@ namespace MobileAzureDevDays.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());
+            AppCenter.Start("fc3db2d6-0ae3-494c-ade2-0ef8e776a576", typeof(Analytics), typeof(Crashes));
         }
     }
 }
